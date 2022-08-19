@@ -1,0 +1,23 @@
+[
+    {
+        "title":"Front End Development",
+        "id":"front_end",
+        "description":"Product listing demo in reactJs using Mui",
+        "url":"/projects/products",
+        "image":"skills/1.png"
+    },
+    {
+        "title":"Back End Development",
+        "id":"back_end",
+        "description":"some other func demo in reactJs using Mui",
+        "url":"/projects/else",
+        "image":"skills/2.png"
+    },
+    {
+        "title":"Database Management",
+        "id":"db_manage",
+        "description":"some other func demo in reactJs using Mui",
+        "url":"/projects/else",
+        "image":"skills/3.png"
+    }
+]
