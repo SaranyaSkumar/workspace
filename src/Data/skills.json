@@ -2,21 +2,21 @@
     {
         "title":"Front End Development",
         "id":"front_end",
-        "description":"Product listing demo in reactJs using Mui",
+        "description":"Expertise in creating websites using HTML/CSS and javascript frameworks, that allow users to interact with the system",
         "url":"/projects/products",
         "image":"skills/1.png"
     },
     {
         "title":"Back End Development",
         "id":"back_end",
-        "description":"some other func demo in reactJs using Mui",
+        "description":"Managing the server and building & maintaining APIs in NodeJs, by developing the logic as per the requirement",
         "url":"/projects/else",
         "image":"skills/2.png"
     },
     {
         "title":"Database Management",
         "id":"db_manage",
-        "description":"some other func demo in reactJs using Mui",
+        "description":"Effectively managing the information stored in the db and processing/accessing it using SQL commands",
         "url":"/projects/else",
         "image":"skills/3.png"
     }

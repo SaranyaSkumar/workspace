@@ -1,0 +1,32 @@
+[
+    {
+        "title":"Senior Software Developer",
+        "id":"doctoroncall",
+        "company":"DoctorOnCall",
+        "timeframe":"Mar 2020- current",
+        "skills":"NodeJs,AngularJs,PostgreSQL, Sequelize",
+        "description":" Integrated a logical module to handle various user customizations and optimized the efficiency and execution time of the system by implementing Sequelize in NodeJS. Revamped the legacy code to reduce the security bugs by 60%.",
+        "url":"/projects/products",
+        "image":"companies/doctoroncall.jpeg"
+    },
+    {
+        "title":"Full Stack Developer",
+        "id":"netmeds",
+        "company":"Netmeds",
+        "timeframe":"Sept 2018- Mar 2020",
+        "skills":"NodeJs,AngularJs,PostgreSQL",
+        "description":"Created and maintaining the core functionalities like Algolia Search, Available slots, and order status tracking for different lab aggregators by integrating new APIs and a newoperation flow in the backend using Node Js and AngularJs",
+        "url":"/projects/else",
+        "image":"companies/netmeds.jpeg"
+    },
+    {
+        "title":"Operation Analyst",
+        "id":"justdoc",
+        "company":"JustDoc",
+        "timeframe":"July 2018- Sept 2018",
+        "skills":"",
+        "description":"Day-by-day activity analysis by monitoring the production effectiveness and working out a strategy for improving if necessary",
+        "url":"/projects/else",
+        "image":"companies/justDoc.png"
+    }
+]
