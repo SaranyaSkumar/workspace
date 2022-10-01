@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css'
+import { Close, Menu } from '@mui/icons-material';
 
 const Header = () => {
+    const [toggle, setToggle] = useState(false);
+    const [nav, setNav] = useState('navbar');
+
+    const reset = (nav) => {
+        setNav(nav);
+        setToggle(!toggle)
+    }
+
+    useEffect(() => {
+
+    }, [])
+
     return (
-        <header id="header" className="header fixed-top" style={{position:'initial'}}>
+        <header id="header" className="header fixed-top" style={{ position: 'initial' }}>
             <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
 
                 <div className="logo d-flex align-items-center">
-                    <img src={require("./img/logo_img.png")} alt=""/>
+                    <img src={require("./img/logo_img.png")} alt="" />
                     <span>Saranya's WorkSpace</span>
                 </div>
 
-                <nav id="navbar" className="navbar">
+
+                <nav id="navbar" className={nav}>
                     <ul>
                         <li><a className="nav-link scrollto" href="/">Home</a></li>
                         <li><a className="nav-link scrollto" href="/about">About</a></li>
@@ -40,7 +54,13 @@ const Header = () => {
                         {/* <li><a className="nav-link scrollto" href="#contact">Contact</a></li> */}
                         {/* <li><a className="getstarted scrollto" href="#about">Get Started</a></li> */}
                     </ul>
-                    <i className="bi bi-list mobile-nav-toggle"></i>
+                    <div className="mobile-nav-toggle">
+                        {toggle ?
+                            <Close sx={{ color: 'white' }}     onClick={() => reset('navbar')} /> :
+                            <Menu color="#012970" onClick={() => reset('navbar-mobile')} />
+                        }
+                    </div>
+
                 </nav>
 
             </div>
