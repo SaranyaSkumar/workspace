@@ -4,6 +4,7 @@ import ProductCard from './ProductCard'
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import { BASEURL } from './config/config'
+import { HashLoader } from 'react-spinners'
 
 const Products_listing = () => {
     const [Products, setProducts] = useState("");
@@ -11,7 +12,7 @@ const Products_listing = () => {
     const fetchProducts = () => {
         fetch(
             `${BASEURL}/v1/products`)
-            .then((response) =>  response.json())
+            .then((response) => response.json())
             .then(response => {
                 setProducts(response.result);
             })
@@ -29,17 +30,27 @@ const Products_listing = () => {
 
                 <div className="container" data-aos="fade-up">
 
-                    <header className="section-header">
-                        <h2>Product Listing</h2>
-                        <p>Clothing and Accessories</p>
-                    </header>
-                    <div className="row">
-                        {Products.map((data, index) => (
-                            <div key={index} className="col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="600">
-                                <ProductCard data={data} />
+                    {Products ? (
+                        <>
+                            <header className="section-header">
+                                <h2>Product Listing</h2>
+                                <h1 >Clothing and Accessories</h1>
+                            </header>
+
+                            <div className="row">
+                                {Products.map((data, index) => (
+                                    <div key={index} className="col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="600">
+                                        <ProductCard data={data} />
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
+                        </>
+
+                    ) : (
+                        <div className='loader'>
+                            <HashLoader color="#4c6ff1" />
+                        </div>
+                    )}
                 </div>
             </section>
             {/* <div style={{ margin: '14rem 20rem' }}>

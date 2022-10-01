@@ -2059,3 +2059,7 @@
   .marginTop6{
     margin-top: 3%;
   }
+
+  .loader{
+    display: contents;
+  }
