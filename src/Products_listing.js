@@ -1,15 +1,28 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ProductCard from './ProductCard'
-import product_list from './Data/products'
+// import product_list from './Data/products'
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import { BASEURL } from './config/config'
 
 const Products_listing = () => {
+    const [Products, setProducts] = useState("");
+
+    const fetchProducts = () => {
+        fetch(
+            `${BASEURL}/v1/products`)
+            .then((response) =>  response.json())
+            .then(response => {
+                setProducts(response.result);
+            })
+    }
+
     useEffect(() => {
+        fetchProducts();
         AOS.init();
         AOS.refresh();
     }, []);
-    let catagories = Object.keys(product_list);
+    // let catagories = Object.keys(product_list);
     return (
         <>
             <section id="values" className="values marginTop6">
@@ -18,10 +31,10 @@ const Products_listing = () => {
 
                     <header className="section-header">
                         <h2>Product Listing</h2>
-                        <p>{catagories[0]}</p>
+                        <p>Clothing and Accessories</p>
                     </header>
                     <div className="row">
-                        {product_list['Clothing and Accessories'].map((data, index) => (
+                        {Products.map((data, index) => (
                             <div key={index} className="col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="600">
                                 <ProductCard data={data} />
                             </div>

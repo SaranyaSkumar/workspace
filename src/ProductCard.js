@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ProductCard = ({ data }) => {
-    console.log("data", data);
+    // console.log("data", data);
     return (
         <div className="box">
             <img src={require(`./img/${data.image}`)} className="img-fluid" alt="" width='80%' height='100%' />
